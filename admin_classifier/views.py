@@ -4,7 +4,6 @@ from django.views import View
 
 # Internal Imports
 from . import mongodb as mdb
-from .my_decorator import AdminStaffRequiredMixin
 
 # Python Package Imports
 import pickle
@@ -27,7 +26,7 @@ db_data = mdb.access()
 
 
 # Home Module Starts
-class Home(AdminStaffRequiredMixin, View):
+class Home(View):
 
     template_name = 'admin_classifier/home.html'
     context = {}
@@ -118,7 +117,7 @@ class Algorithm(View):
         return pickle.dumps(sc), X_train, X_test
 
 
-class Classification(AdminStaffRequiredMixin, Algorithm):
+class Classification(Algorithm):
 
     template_name = 'admin_classifier/classification.html'
     context = {}
@@ -244,7 +243,7 @@ class Classification(AdminStaffRequiredMixin, Algorithm):
         return render(request, self.template_name, self.context)
 
 
-class Regression(AdminStaffRequiredMixin, Algorithm):
+class Regression(Algorithm):
 
     template_name = 'admin_classifier/regression.html'
     context = {}
@@ -359,7 +358,7 @@ class Regression(AdminStaffRequiredMixin, Algorithm):
         return render(request, self.template_name, self.context)
 
 
-class Clustering(AdminStaffRequiredMixin, Algorithm):
+class Clustering(Algorithm):
 
     template_name = 'admin_classifier/clustering.html'
     context = {}

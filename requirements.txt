@@ -137,7 +137,6 @@ pyppeteer==0.2.2
 PyQt5==5.12.3
 PyQt5-sip==12.9.0
 PyQtWebEngine==5.12.1
-pyrsistent==0.18.0
 pywin32==301
 pywin32-ctypes==0.2.0
 pywinpty==1.1.3

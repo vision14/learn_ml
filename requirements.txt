@@ -142,7 +142,6 @@ python-dateutil==2.8.2
 python-lsp-black==1.0.0
 python-lsp-jsonrpc==1.0.0
 python-lsp-server==1.2.0
-python-slugify==5.0.2
 pywin32==301
 pywin32-ctypes==0.2.0
 pywinpty==1.1.3
